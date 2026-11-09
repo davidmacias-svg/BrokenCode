@@ -19,7 +19,6 @@ public class FixMe {
 
 		String input = "";
 
-		
 		for (int i = 0; i < lines; i++) {
 
 			// Read in a string
@@ -49,37 +48,36 @@ public class FixMe {
 					currentChar = input.charAt(j);
 
 					// if the current and previous char are the same
+
+					if (currentChar == previousChar) {
+
+						// increase the count
+						currentCount++;
+
+					} else {
+
+						// print current count + " " + previousChar
+						output += currentCount + " " + previousChar + " ";
+						// currentCount = 1
+						currentCount = 1;
+					}
+
 				}
-
-				if (currentChar == previousChar) {
-
-					// increase the count
-					currentCount++;
-				} else {
-					// print current count + " " + previousChar
-					output += currentCount + " " + previousChar + " ";
-					// currentCount = 1
-					currentCount = 1;
-				}
-
 				// If we're on the last character
 				if (j == input.length() - 1) {
 					// add the count to the output
 					output += currentCount + " " + currentChar + " ";
 				}
-				
-			}
 
-			
+			}
 
 			// Print newline
 			output += "\n";
 
 			// Print the result
-			System.out.println(output);
-			in.close();
-				
-		
+
 		}
+		System.out.println(output);
+		in.close();
 	}
 }

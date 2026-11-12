@@ -1,4 +1,3 @@
-
 //This should be able to solve J3 as seen in Instructions.pdf.
 import java.util.Scanner;
 
@@ -6,6 +5,7 @@ import java.util.Scanner;
  *
  * @author SPH_SHSM
  */
+
 public class FixMe {
 
 	public static void main(String[] args) {
